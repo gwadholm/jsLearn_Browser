@@ -3,6 +3,102 @@ body {
   padding: 0;
   margin: 0;
 }
+
+#navWrapper {
+  border-bottom: 1px solid #bbb;
+  padding: 20px 0 20px 80px;
+}
+
+#headNav {
+  display: inline;
+}
+
+#search {
+  display:inline-flex;
+  width: 60vw;
+  border: 2px solid #222;
+  border-radius: 24px;
+  padding-left: 20px;
+}
+
+#account, #account li {
+  display:inline-flex;
+}
+ul#navAccount li {
+  list-style-type: none;
+  margin: 0 10px;
+}
+
+img#logoSVG {
+  height: 40px;
+  display: inline-flex;
+  margin-right: 20px;
+}
+
+#cartSVG {
+  width: 24px;
+}
+
+#logoSVG {
+  width: 80px;
+}
+
+/* ul.navAccount {
+} */
+
+main {
+  margin-bottom: 200px;
+}
+
+ul.bubbles {
+  width: 80vw;
+  margin: auto;
+}
+
+ul.bubbles li {
+  list-style-type: none;
+  max-width:100px;
+  display: inline-block;
+  margin: 5px 5px 0 5px;
+
+}
+
+li.categoryBubble img {
+  width: 80px;
+  height: 80px;
+  background-color: #ccc;
+  border-radius: 64px;
+  padding: 12px;
+}
+
+li.categoryBubble p {
+  text-align: center;
+  margin: 0;
+}
+
+fieldset#topicButtons {
+  width: 30vw;
+}
+label.topicButton {
+  display: inline-block;
+  min-width: 48px;
+  min-height: 48px;
+  background-color: aquamarine;
+}
+input[type=radio] {
+  opacity:0;
+  position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
 img.lightbox {
   max-width: 90vw;
   max-height: 90vh;
