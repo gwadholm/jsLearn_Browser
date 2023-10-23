@@ -6,25 +6,29 @@
 let body = document.querySelector("body");
 
 document.querySelector('h1#myTag').insertAdjacentHTML("afterend" ,"<h2>My clipart library</h2>");
-document.querySelector('h2').insertAdjacentHTML("beforebegin", `<img src="https://design.gracetoread.com/img/clipart/nature/monarch_01.png" />`);
+document.querySelector('h2').insertAdjacentHTML("beforebegin", `<img class="normal" src="https://design.gracetoread.com/img/clipart/nature/monarch_01.png" />`);
 
-const topicButton = `
-<span class="topicButtonContainer">
-  <input id="topic1" type="radio" name="topic" value="topic" />
-  <label for="topic1" class="topicButton">
-  Nature
-  </label>  
-</span>`;          
+// const topicButton = `
+// <div class="topicButtonContainer">
+//   <input id="topic1" type="radio" name="topic" value="topic" />
+//   <label for="topic1" class="topicButton">
+//   Nature
+//   </label>  
+// </div>`;          
 
 
-document.querySelector("fieldset").insertAdjacentHTML("afterbegin", `<div class="actionGroup">${topicButton}${topicButton}${topicButton}${topicButton}${topicButton}</div>`);
+// document.querySelector("fieldset").insertAdjacentHTML("afterbegin", `<div class="actionGroup">${topicButton}${topicButton}${topicButton}${topicButton}${topicButton}</div>`);
 
 
 
 //lightbox
-document.querySelector("h1").addEventListener('click', () => {
-  
+document.querySelector(".normal").addEventListener('click', () => {
+  const screenWidth = `ScreenWidth: ${screen.width}` 
+  const screenHeight = `ScreenHeight: ${screen.height}` 
+
   body.insertAdjacentHTML("beforeend", `<div class="lightboxDiv"><img class="lightbox" src="https://design.gracetoread.com/lb/img/clipart/nature/monarch_01.png" /></div>`);
+
+  console.log(screenWidth + " " + screenHeight);
   
 
   document.querySelector(".lightbox").addEventListener('click', (e) => {
@@ -37,7 +41,15 @@ document.querySelector("h1").addEventListener('click', () => {
     }
   })
 });
- 
+
+document.querySelector("#headNav").addEventListener('pointerleave', function() {
+  console.log("missed me!");
+})
+
+
+})()
+
+/*
 //digital clock function
 function displayTime(){
   const clock = document.querySelector("#clock");
@@ -47,5 +59,6 @@ function displayTime(){
 displayTime()
 setInterval(displayTime, 1000);
 
-})()
 
+file:///c%3A/Users/gwadh/Documents/Valencia/Fall2023/WebProgramming/jsLearn_Browser/jsLearn_Browser/index.html
+*/

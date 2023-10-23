@@ -3,6 +3,61 @@ body {
   padding: 0;
   margin: 0;
 }
+h1, h2, h3, h4, h5, li, a, p {
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+}
+#navWrapper {
+  padding: 20px 0 20px 10px;
+  margin: auto;
+  max-width: 1400px;
+  
+}
+#headNav {
+  display: inline-flex;
+
+}
+#logoSVG {
+  width: 80px;
+  vertical-align: top;
+}
+#search {
+  display:inline-flex;
+  min-width: 74%;
+  max-width: 82%;
+  border: 2px solid #222;
+  border-radius: 45px;
+  margin: 0 5px 0 20px;
+  padding-left: 20px;
+  height: 50px;
+}
+#search p {
+  display: inline-flex;
+  vertical-align: middle;
+}
+#account, #account li {
+  display:inline-flex;
+  float: right;
+}
+ul {
+  margin: 0;
+  padding: 15px 0 0 0;
+}
+ul#navAccount li {
+  list-style-type: none;
+  margin: 0 8px 0 0;
+  vertical-align: top;
+}
+img#logoSVG {
+  height: 40px;
+  display: inline-flex;
+  margin: auto;
+  vertical-align: middle;
+}
+#cartSVG {
+  width: 24px;
+}
+/* ul.navAccount {
+} */
 #banner {
   position: relative;
   padding-top: 20px;
@@ -10,6 +65,7 @@ body {
 
 #banner:before{
   content: "";
+  border-top: 1px solid #bbb;
   background-color: rgb(255,222,191);
   position: absolute;
   width: 100vw;
@@ -21,81 +77,38 @@ body {
   text-align: center;
   /* font-family: "Bell MT"; */
   color: #222;
-  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
   font-weight: 300;
   letter-spacing: .5px;
   font-size: 32px;
   line-height: 36px;
 }
-#navWrapper {
-  border-bottom: 1px solid #bbb;
-  padding: 20px 0 20px 80px;
-  margin: 0;
-}
-
-#headNav {
-  display: inline;
-}
-
-#search {
-  display:inline-flex;
-  width: 60vw;
-  border: 2px solid #222;
-  border-radius: 45px;
-  padding-left: 20px;
-}
-
-#account, #account li {
-  display:inline-flex;
-}
-ul#navAccount li {
-  list-style-type: none;
-  margin: 0 10px;
-}
-
-img#logoSVG {
-  height: 40px;
-  display: inline-flex;
-  margin-right: 20px;
-}
-
-#cartSVG {
-  width: 24px;
-}
-
-#logoSVG {
-  width: 80px;
-}
-
-/* ul.navAccount {
-} */
-
 main {
   padding: 0;
-  margin-top: 0;
-  margin-bottom: 200px;
+  margin: 80px 0 0 0;
+  max-width: 1400px;
 }
-
+/*BubbleGrid*/
 ul.bubbles {
-  
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
   list-style-type: none;
   width: 100vw;
   margin: auto;
+  max-width: 1100px;
 }
 ul.bubbles li{
   max-width:100%;
   display: inline-block;
-  margin: 5px 20px 0 20px;
-  padding: 12px;
-  
+  margin: 5px 0 0 0;
+  padding: 0px;  
 }
-
 #searchNav a:before {
   content: '';
   position: relative;
   display: block;
-  width: 140px;
-  height: 140px;
+  width: 114px;
+  height: 114px;
   border-radius: 50%;
   background-size: 80%;
   background-repeat: no-repeat;
@@ -104,7 +117,6 @@ ul.bubbles li{
   border: 1px solid #d4b9a0;
   margin-bottom: 10px;
 }
-
 #bubble1 a:before {
   background-image: url(../img/leaf3.png);
 }
@@ -123,8 +135,6 @@ ul.bubbles li{
 #bubble6 a:before {
   background-image: url(../img/snowman_01.png);
 }
-
-
 /* li.categoryBubble img {
   width: 110px;
   height: 110px;
@@ -132,17 +142,17 @@ ul.bubbles li{
   border: 1px solid #d4b9a0;
   border-radius: 90px;
 } */
-
-li.categoryBubble a {
+.categoryBubble a {
   display: inline-block;
   text-align: center;
   text-decoration: none;
   color: #222;
-
 }
-
-fieldset#topicButtons {
-  width: 30vw;
+.topicButtons {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  
 }
 label.topicButton {
   display: inline-block;
@@ -154,15 +164,6 @@ input[type=radio] {
   opacity:0;
   position: absolute;
 }
-
-
-
-
-
-
-
-
-
 
 img.lightbox {
   max-width: 90vw;
@@ -186,3 +187,5 @@ div.lightboxDiv {
   left: 0;
   z-index: 999;
 }
+
+/*Below 900px*/
