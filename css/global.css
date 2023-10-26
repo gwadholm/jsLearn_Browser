@@ -16,9 +16,28 @@ h1, h2, h3, h4, h5, li, a, p {
   display: inline-flex;
 
 }
-#logoSVG {
-  width: 80px;
-  vertical-align: top;
+img#logoSVG {
+  height: 40px;
+  display: inline-flex;
+  margin: auto;
+  vertical-align: middle;
+}
+#cartSVG, #searchSVG {
+  width: 24px;
+}
+#searchSVG {
+  display: inline-flex;
+  margin: auto;
+  background-color: #f1641e;
+  width: 48px;
+  height: 100%;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+#searchSVG img {
+  float: right;
+  width: 24px;
+  margin: auto;
 }
 #search {
   display:inline-flex;
@@ -32,8 +51,9 @@ h1, h2, h3, h4, h5, li, a, p {
 }
 #search p {
   display: inline-flex;
-  vertical-align: middle;
+  width: 93%;
 }
+
 #account, #account li {
   display:inline-flex;
   float: right;
@@ -47,17 +67,6 @@ ul#navAccount li {
   margin: 0 8px 0 0;
   vertical-align: top;
 }
-img#logoSVG {
-  height: 40px;
-  display: inline-flex;
-  margin: auto;
-  vertical-align: middle;
-}
-#cartSVG {
-  width: 24px;
-}
-/* ul.navAccount {
-} */
 #banner {
   position: relative;
   padding-top: 20px;
@@ -95,13 +104,15 @@ ul.bubbles {
   list-style-type: none;
   width: 100vw;
   margin: auto;
-  max-width: 1100px;
+  max-width: 1000px;
+
 }
 ul.bubbles li{
   max-width:100%;
   display: inline-block;
-  margin: 5px 0 0 0;
-  padding: 0px;  
+  margin: 5px auto 0 auto;
+  padding: 0;
+
 }
 #searchNav a:before {
   content: '';
@@ -116,9 +127,10 @@ ul.bubbles li{
   background-color: #eeece9;
   border: 1px solid #d4b9a0;
   margin-bottom: 10px;
+  /* transition: width ease 0.9s, height ease 0.9s; */
 }
 #bubble1 a:before {
-  background-image: url(../img/leaf3.png);
+  background-image: url(../img/leaf1.png);
 }
 #bubble2 a:before {
   background-image: url(../img/cupcake_Pink_02.png);
@@ -130,7 +142,7 @@ ul.bubbles li{
   background-image: url(../img/snowflake_01.png);
 }
 #bubble5 a:before {
-  background-image: url(../img/leaf1.png);
+  background-image: url(../img/christmasTree_02.png);
 }
 #bubble6 a:before {
   background-image: url(../img/snowman_01.png);
@@ -188,4 +200,57 @@ div.lightboxDiv {
   z-index: 999;
 }
 
-/*Below 900px*/
+/**mobile versions */
+  
+@media only screen and (max-width: 1400px) {
+
+}
+@media only screen and (max-width: 1025px) {
+
+  ul.bubbles {    
+    gap: 1rem;
+    max-width: 900px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #searchNav a:before {
+    width: 90px;
+    height: 90px;
+  }
+  ul.bubbles {
+    gap: .2rem;
+    max-width: 840px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #searchNav a:before {
+    width: 114px;
+    height: 114px;
+  }
+  ul.bubbles {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .2rem;
+    max-width: 1100px;
+  }
+}
+@media only screen and (max-width: 490px) {
+  #searchNav a:before {
+    width: 80px;
+    height: 80px;
+  }
+  ul.bubbles {
+    gap: .2rem;
+  }
+
+}
+@media only screen and (max-width: 359px) {
+  #searchNav a:before {
+    width: 60px;
+    height: 60px;
+  }
+  ul.bubbles {
+    grid-template-columns: 1fr 1fr;
+    gap: .2rem;
+    max-width: 800px;
+  }
+}
