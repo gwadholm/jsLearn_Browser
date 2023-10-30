@@ -10,61 +10,97 @@
   <body>
     <div id="navWrapper">
       <div id="headNav">
-          <span>
-            <img id="logoSVG" src="img/logo.svg" />
-          </span>
-        </div>
-        <div id="search">
-          <p>Search for anything</p>
-          <span id="searchSVG" class="searchIcon">
-            <img src="img/searchIcon.svg" />
+        <span>
+          <img id="logoSVG" src="img/logo.svg" />
         </span>
+      </div>
+      <div id="search">
+        <form id="globalSearchForm" class="globalSearch" method="get" >
+          <label for="globalSearch" class="globalSearch"></label>
+          <div id="searchBar">
+            <input data-id="search-query" type="text" name="search-query" class="globalSearch" placeholder="Search for anything" value autocomplete="off" autocorrect="off" autocapitalize="off" role="combobox" aria-autocomplete="both" aria-controls="globalSearch" aria-expanded="false"/>
+          <button type="submit" class="globalSearch_icon">
+              <img src="img/searchIcon.svg" />
+          </button>
         </div>
-        <div id="account">
-          <ul id="navAccount">
-            <li>
-              <span class="icon">
+      </form>
+      </div>
+      <div id="account">
+        <ul id="navAccount">
+          <li>
+              <span class="searchIcon">
                 <img id="cartSVG" src="img/cart.svg" />
             </span>
           </li>
           <li>Sign in</li>
-        </div>
       </div>
     </div>
-
-      <div id="banner">
-        <div id="splash">
-          <h1>Explore my clipart library.</h1>
-        </div>
-        <div id="categoryBubbles">
-          <ul id="searchNav" class="bubbles">
-            <li class="categoryBubble" id="bubble1">
-              <a href="https://design.gracetoread.com/"  target="_blank">Leaves</a>
-            </li>
-            <li class="categoryBubble" id="bubble2">
-              <a href="https://design.gracetoread.com/"  target="_blank">Food</a>
-            </li>
-            <li class="categoryBubble" id="bubble3">
-              <a href="https://design.gracetoread.com/"  target="_blank">Nature</a>
-            </li>
-            <li class="categoryBubble" id="bubble4">
-              <a href="https://design.gracetoread.com/"  target="_blank">Snowflake</a>
-            </li>
-            <li class="categoryBubble" id="bubble5">
-              <a  href="https://design.gracetoread.com/" target="_blank">Holidays</a>
-            </li>
-            <li class="categoryBubble" id="bubble6">            
-              <a href="https://design.gracetoread.com/" target="_blank">Cartoons</a>
-            </li>
-
-          </ul>  
-        </div>
+    <nav>
+      <ul>
+        <li>Clipart Library</li>
+        <li>Pattern Designs</li>
+        <li>Motion Graphics</li>
+      </ul>
+    </nav>
+    <div id="banner">
+      <div id="splash">
+        <h1>Explore my clipart library.</h1>
       </div>
-      <main>
+      <div id="categoryBubbles">
+        <ul id="searchNav" class="bubbles">
+          <li class="categoryBubble" id="bubble1">
+            <a href="https://design.gracetoread.com/"  target="_blank">Leaves</a>
+          </li>
+          <li class="categoryBubble" id="bubble2">
+            <a href="https://design.gracetoread.com/"  target="_blank">Food</a>
+          </li>
+          <li class="categoryBubble" id="bubble3">
+            <a href="https://design.gracetoread.com/"  target="_blank">Nature</a>
+          </li>
+          <li class="categoryBubble" id="bubble4">
+            <a href="https://design.gracetoread.com/"  target="_blank">Snowflake</a>
+          </li>
+          <li class="categoryBubble" id="bubble5">
+            <a href="https://design.gracetoread.com/" target="_blank">Holidays</a>
+          </li>
+          <li class="categoryBubble" id="bubble6">            
+            <a href="https://design.gracetoread.com/" target="_blank">Cartoons</a>
+          </li>
 
+        </ul>  
+      </div>
+    </div>
+    <main>
+
+
+      <div id="formsTutorial">
+        
       <h1 id="myTag">GraceDesigned</h1>
-      <span id="clock"></span>
 
+        <form >
+          <ul>
+            <li>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="user_name" value="Your name here" />
+            </li>
+            <li>
+              <label for="mail">Email:</label>
+              <input type="email" id="mail" name="user_email" />
+            </li>
+            <li>
+              <label for="msg">Message:</label>
+              <textarea id="msg" name="user_message"></textarea>
+            </li>
+            <li class="button">
+              <button type="button">Send your message</button>
+            </li>
+          </ul>
+        </form>
+        
+
+
+
+      </div>
     </main>
     <footer>
 
