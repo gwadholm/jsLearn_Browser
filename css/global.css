@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, li, a, p {
 }
 #headNav {
   display: inline-flex;
-  margin: 0 10px 0 20px;
+  margin: 0 10px 0 0px;
 }
 img#logoSVG {
   height: 40px;
@@ -117,13 +117,14 @@ ul#navAccount li {
 /* navigation line*/
 nav {
   max-width: 1400px;
-  margin: auto;
 }
 nav ul {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
   list-style-type: none;
+  max-width: 800px;
+  padding: 0;
 }
 nav li {
 
@@ -192,7 +193,7 @@ ul#searchNav li{
   background-image: url(../img/leaf1.png);
 }
 #bubble2 a:before {
-  background-image: url(../img/cupcake_Pink_02.png);
+  background-image: url(../img/christmasTree_04.png);
 }
 #bubble3 a:before {
   background-image: url(../img/monarch_01.png);
