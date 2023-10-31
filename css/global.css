@@ -246,10 +246,10 @@ img.lightbox {
 div.lightboxDiv {
   width: 100vw;
   height: 90vh;
-  border: 14px solid  rgba(255, 146, 92, 1);
+  border: 5px solid  rrgb(110, 110, 110);
   position: fixed;
   margin: auto;
-  background-color: rgba(255, 146, 92, .9);
+  background-color: rgba(229, 229, 229, 0.95);
   top: 0;
   left: 0;
   z-index: 999;
