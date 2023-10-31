@@ -59,17 +59,14 @@ form, #searchBar {
   border-radius: 50%;
   width: 24px;
   margin-right: 4px;
+  margin-top: 2px;
 }
 button.globalSearch_icon {
   border: 2px solid #222;  
-  /* border-top-left-radius: 0;
-  border-bottom-left-radius: 0; */
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   border-left: 0;
   padding: 0;
-  /* width: 51px;
-  height: 51px; */
 }
 #searchBar:hover .globalSearch_icon {
   background-color: #ff925c;
