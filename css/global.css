@@ -2,6 +2,7 @@ body {
   background-color: white;
   padding: 0;
   margin: 0;
+  /* overflow-x: hidden; */
 }
 h1, h2, h3, h4, h5, li, a, p {
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
@@ -28,7 +29,7 @@ img#logoSVG {
 /* Search bar and icon */
 #search {
   display:inline-flex;
-  width: calc(95% - 240px);
+  width: calc(100% - 240px);
 }
 form, #searchBar {
   width: 100% !important;
@@ -53,13 +54,17 @@ form, #searchBar {
   font-size: 16px;
   outline: none;
 }
-#searchBar img {
-  background-color: #ff925c;
-  padding: 8px;
-  border-radius: 50%;
-  width: 24px;
+button.globalSearch_icon section {
+  width: 25px;
+  height: 25px;
+  padding: 6px;
   margin-right: 4px;
-  margin-top: 2px;
+  margin-top: 1px;
+  background-color: #ff925c;
+  border-radius: 50%;
+}
+button.globalSearch_icon section img {
+  width: 24px;
 }
 button.globalSearch_icon {
   border: 2px solid #222;  
@@ -127,6 +132,31 @@ nav ul {
 nav li {
 
 }
+
+/*Responsive Hamburger*/
+
+#hamburger {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  width: 40px;
+  height: 50px;
+  top: 5px;
+  right: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #222222;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 14px;
+}
+
+
 /*Banner Bubbles*/
 #banner {
   position: relative;
@@ -264,17 +294,14 @@ div.lightboxDiv {
 /* Playground */
 h1#myTag {
   text-align: center;
-  margin: auto;
-  width: 320px;
+  margin-top: 10px;
 }
 
 #formsTutorial {
-
   margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 40px;
   width: 340px;
-
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 1em;
@@ -327,9 +354,9 @@ form li + li {
 @media only screen and (max-width: 1118px) {
 
   ul#searchNav {    
-
     max-width: 900px;
   }
+
 }
 @media only screen and (max-width: 960px) {
   #searchNav a:before {
@@ -337,7 +364,6 @@ form li + li {
     height: 90px;
   }
   ul#searchNav {
-
     max-width: 740px;
   }
 }
@@ -349,6 +375,28 @@ form li + li {
   ul#searchNav {
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 540px;
+  }
+  #hamburger {
+    display: inline;
+  }
+  nav {
+    display: none;
+  }
+  #search {
+    display:inline-flex;
+    width: calc(100% - 40px);
+    margin-top: 40px;
+  }
+  #account {
+    position: absolute;
+    float: right;
+    top: 5px;
+    right: 0;
+  }
+  #headNav {
+    position: absolute;
+    float: left;
+    top: 5px;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -366,18 +414,58 @@ form li + li {
     width: 80px;
     height: 80px;
   }
-  ul#searchNav {
-
-  }
 
 }
-@media only screen and (max-width: 359px) {
+@media only screen and (max-width: 380px) {
   #searchNav a:before {
-    width: 60px;
-    height: 60px;
+    width: 110px;
+    height: 110px;
   }
   ul#searchNav {
     grid-template-columns: 1fr 1fr;
-    max-width: 800px;
+    max-width: 320px;
+  }  
+  #banner:before{
+    height: 90%;
+    padding-top: 0px;
+  }  
+  #formsTutorial {
+    width: 250px;
+  }
+  #formsTutorial input, textarea {
+    width: 210px;
+  }
+  #formsTutorial textarea {
+    height: 3em;
+    vertical-align: top;
+  }
+  #formsTutorial ul {
+    margin: 20px 0 0 0;
+  }
+  #formsTutorial label {
+    width: 60px;
+  }
+  h1#myTag {
+    font-size: 1.6em;
+  }
+  #myTag img {
+    width: 140px;
+  }
+}
+@media only screen and (max-width: 310px) {
+  ul#searchNav {
+    max-width: 300px;
+  }
+  #splash {
+    width: 220px;
+    margin: auto;
+    margin-top: 0px;
+  }
+  #splash h1 {
+    font-size: 1.9em;
+  }
+
+  #search input {
+    font-size: 14px;
   }
 }
