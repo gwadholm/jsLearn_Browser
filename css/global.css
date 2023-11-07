@@ -7,11 +7,19 @@ body {
 h1, h2, h3, h4, h5, li, a, p {
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
 }
-#navWrapper {
+header {
   padding: 20px 0 20px 10px;
   margin: auto;
   max-width: 1400px;  
 }
+main {
+  padding: 0;
+  margin: 80px auto 0 auto;
+  max-width: 1200px;
+}
+
+
+/* Nav Bar  */
 #headNav {
   display: inline-flex;
   margin: 0 10px 0 0px;
@@ -31,7 +39,8 @@ img#logoSVG {
   display:inline-flex;
   width: calc(100% - 240px);
 }
-form, #searchBar {
+
+form#globalSearchForm, #searchBar {
   width: 100% !important;
 }
 #searchBar {
@@ -54,7 +63,7 @@ form, #searchBar {
   font-size: 16px;
   outline: none;
 }
-button.globalSearch_icon section {
+button.globalSearch_icon div {
   width: 25px;
   height: 25px;
   padding: 6px;
@@ -119,21 +128,24 @@ ul#navAccount li {
 
 /* navigation line*/
 nav {
-  max-width: 1400px;
-}
-nav ul {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
   list-style-type: none;
-  max-width: 800px;
+  max-width: 600px;
   padding: 0;
 }
-nav li {
 
+nav a {
+  margin-top: 14px;
+  color: black;
+  text-decoration: none;
 }
 
+
+
 /*Responsive Hamburger*/
+
 
 #hamburger {
   display: none;
@@ -157,7 +169,7 @@ nav li {
 }
 
 
-/*Banner Bubbles*/
+/*Banner styling*/
 #banner {
   position: relative;
   padding-top: 20px;
@@ -180,14 +192,11 @@ nav li {
   font-size: 32px;
   line-height: 36px;
 }
-main {
-  padding: 0;
-  margin: 80px auto 0 auto;
-  max-width: 1200px;
-}
+
+
 
 /*BubbleGrid*/
-ul#searchNav {
+ul#categoryBubbles {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 2rem;
@@ -197,12 +206,12 @@ ul#searchNav {
   max-width: 1100px;
   padding: 0; 
 }
-ul#searchNav li{
+ul#categoryBubbles li{
   max-width:100%;
   display: inline-block;
   margin: 5px auto 0 auto;
 }
-#searchNav a:before {
+#categoryBubbles a:before {
   content: '';
   position: relative;
   display: block;
@@ -221,7 +230,7 @@ ul#searchNav li{
   background-image: url(../img/leaf1.png);
 }
 #bubble2 a:before {
-  background-image: url(../img/christmasTree_04.png);
+  background-image: url(../img/cupcake_Pink_02.png);
 }
 #bubble3 a:before {
   background-image: url(../img/monarch_01.png);
@@ -230,7 +239,7 @@ ul#searchNav li{
   background-image: url(../img/snowflake_01.png);
 }
 #bubble5 a:before {
-  background-image: url(../img/christmasTree_02.png);
+  background-image: url(../img/christmasTree_swirl.svg);
 }
 #bubble6 a:before {
   background-image: url(../img/snowman_01.png);
@@ -243,10 +252,31 @@ ul#searchNav li{
 }
 
 /* Button Field */
-.topicButtons {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));  
+
+form#topicSearch legend{
+  display: none;
+}
+form#topicSearch fieldset {
+  border: none;
+  display:flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: -6px;
+  max-width: 380px;
+  padding-left: 0;
+  margin-left: 0;
+}
+form#topicSearch fieldset p {
+  background-color: rgb(233,233, 233);
+  border-radius: 24px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px;
+  padding: 12px 12px;
+  min-width: 48px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
 }
 label.topicButton {
   display: inline-block;
@@ -265,6 +295,8 @@ input[type=radio] {
 .fadeable { 
   transition: opacity .5s ease-in;
 }
+
+
 
 /* Lightbox */
 img.lightbox {
@@ -332,7 +364,7 @@ h1#myTag {
   text-align: left;
   margin-left: 0.5em;
 }
-form li + li {
+form#formsTutorial li + li {
   margin-top: 1em;
 }
 #formsTutorial button {
@@ -353,28 +385,31 @@ form li + li {
 }
 @media only screen and (max-width: 1118px) {
 
-  ul#searchNav {    
-    max-width: 900px;
+  ul#categoryBubbles {    
+    max-width: 1100px;
   }
 
 }
 @media only screen and (max-width: 960px) {
-  #searchNav a:before {
-    width: 90px;
-    height: 90px;
+  #categoryBubbles a:before {
+    width: 100px;
+    height: 100px;
   }
-  ul#searchNav {
-    max-width: 740px;
+  ul#categoryBubbles {
+    /* max-width: 1200px; */
   }
 }
+
+
+
 @media only screen and (max-width: 800px) {
-  #searchNav a:before {
+  #categoryBubbles a:before {
     width: 114px;
     height: 114px;
   }
-  ul#searchNav {
+  ul#categoryBubbles {
     grid-template-columns: 1fr 1fr 1fr;
-    max-width: 540px;
+    max-width: 700px;
   }
   #hamburger {
     display: inline;
@@ -398,32 +433,48 @@ form li + li {
     float: left;
     top: 5px;
   }
-}
-@media only screen and (max-width: 600px) {
-  #searchNav a:before {
-    width: 114px;
-    height: 114px;
+  /* #navSmall {
+    display: inline;
   }
-  ul#searchNav {
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 400px;
+  #hamburger {
+    width: 30px;
   }
+  search-box {
+    width: calc(100% - 40px);
+    margin-top: 40px;
+    display: inline-block;
+  } */
 }
+
+
+
+
+
+
+
 @media only screen and (max-width: 490px) {
-  #searchNav a:before {
-    width: 80px;
-    height: 80px;
+  #categoryBubbles a:before {
+    width: 95px;
+    height: 95px;
   }
 
 }
-@media only screen and (max-width: 380px) {
-  #searchNav a:before {
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 390px) {
+  #categoryBubbles a:before {
     width: 110px;
     height: 110px;
   }
-  ul#searchNav {
+  ul#categoryBubbles {
     grid-template-columns: 1fr 1fr;
-    max-width: 320px;
+    max-width: 380px;
   }  
   #banner:before{
     height: 90%;
@@ -431,6 +482,11 @@ form li + li {
   }  
   #formsTutorial {
     width: 250px;
+  }
+  h1#splash {
+    width: 350px;
+    margin: auto;
+    margin-top: 0px;
   }
   #formsTutorial input, textarea {
     width: 210px;
@@ -452,20 +508,42 @@ form li + li {
     width: 140px;
   }
 }
-@media only screen and (max-width: 310px) {
-  ul#searchNav {
+
+
+
+
+@media only screen and (max-width: 350px) {
+  ul#categoryBubbles {
     max-width: 300px;
   }
-  #splash {
+  h1#splash {
     width: 220px;
     margin: auto;
-    margin-top: 0px;
-  }
-  #splash h1 {
+    margin-top: 0px;    
     font-size: 1.9em;
   }
 
+
   #search input {
     font-size: 14px;
+  }
+}
+
+
+
+@media only screen and (max-width: 280px) {
+  #categoryBubbles a:before {
+    width: 80px;
+    height: 80px;
+  }
+  #formsTutorial {
+    width: 180px;
+  }
+  #formsTutorial input, textarea {
+    width: 160px;
+  }
+  #myTag img {
+    /* opacity: 0; */
+    display: none;
   }
 }

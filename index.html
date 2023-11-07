@@ -4,32 +4,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>DOM</title>
+    <title>My Clip Art Site</title>
     <link rel="stylesheet" href="css/global.css"></head>
   </head>
   <body>
-    <div id="navWrapper">
+    <header>
       <div id="headNav">
-        <span>
-          <img id="logoSVG" src="img/logo.svg" />
-        </span>
+        <span><img id="logoSVG" src="img/logo.svg" /></span>
       </div>
 
       <div id="search">
-        <section id="hamburger">
+        <div id="hamburger">
           <div class="bar1"></div>
           <div class="bar2"></div>
           <div class="bar3"></div>
-        </section>
+        </div>
         <form id="globalSearchForm" class="globalSearch" method="get" >
           <label for="globalSearch" class="globalSearch"></label>
           <div id="searchBar">
             <input data-id="search-query" type="text" name="search-query" class="globalSearch" placeholder="Search for anything" value autocomplete="off" autocorrect="off" autocapitalize="off" role="combobox" aria-autocomplete="both" aria-controls="globalSearch" aria-expanded="false"/>
-          <button type="submit" class="globalSearch_icon">
-              <section><img src="img/searchIcon.svg" /></section>
-          </button>
-        </div>
-      </form>
+            <button type="submit" class="globalSearch_icon">
+              <div><img src="img/searchIcon.svg" /></div>
+            </button>
+          </div>
+        </form>
       </div>
       <div id="account">
         <ul id="navAccount">
@@ -39,75 +37,100 @@
             </span>
           </li>
           <li>Sign in</li>
-      </div>
+      </div> 
+  
       <nav>
-        <ul>
-          <li>Clip Art Library</li>
-          <li>Pattern Designs</li>
-          <li>Motion Graphics</li>
-        </ul>
-      </nav>
-    </div>
+          <a href="#" alt="Clip art library" target="_blank">Clip Art Library</a>
+          <a href="https://www.grace.wadholm.com/resume.html" alt="Pattern Designs" target="_blank">Pattern Designs</a>
+          <a href="https://design.gracetoread.com/videos.html" alt="Motion Graphics" target="_blank">Motion Graphics</a>
+      </nav>  
+
+    
+    </header>  
 
     
    <div id="banner">
-      <div id="splash">
-        <h1>Explore my clip art library.</h1>
-      </div>
-      <div id="categoryBubbles">
-        <ul id="searchNav" class="bubbles">
-          <li class="categoryBubble" id="bubble1">
-            <a href="https://design.gracetoread.com/"  target="_blank">Leaves</a>
-          </li>
-          <li class="categoryBubble" id="bubble2">
-            <a href="https://design.gracetoread.com/"  target="_blank">Food</a>
-          </li>
-          <li class="categoryBubble" id="bubble3">
-            <a href="https://design.gracetoread.com/"  target="_blank">Nature</a>
-          </li>
-          <li class="categoryBubble" id="bubble4">
-            <a href="https://design.gracetoread.com/"  target="_blank">Snowflake</a>
-          </li>
-          <li class="categoryBubble" id="bubble5">
-            <a href="https://design.gracetoread.com/" target="_blank">Holidays</a>
-          </li>
-          <li class="categoryBubble" id="bubble6">            
-            <a href="https://design.gracetoread.com/" target="_blank">Cartoons</a>
-          </li>
+      <h1 id="splash">Explore my clip art library.</h1>
 
-        </ul>  
-      </div>
+      <ul id="categoryBubbles" class="bubbles">
+        <li class="categoryBubble" id="bubble1">
+          <a href="https://design.gracetoread.com/"  target="_blank">Leaves</a>
+        </li>
+        <li class="categoryBubble" id="bubble2">
+          <a href="https://design.gracetoread.com/"  target="_blank">Food</a>
+        </li>
+        <li class="categoryBubble" id="bubble3">
+          <a href="https://design.gracetoread.com/"  target="_blank">Nature</a>
+        </li>
+        <li class="categoryBubble" id="bubble4">
+          <a href="https://design.gracetoread.com/"  target="_blank">Snowflake</a>
+        </li>
+        <li class="categoryBubble" id="bubble5">
+          <a href="https://design.gracetoread.com/" target="_blank">Holidays</a>
+        </li>
+        <li class="categoryBubble" id="bubble6">            
+          <a href="https://design.gracetoread.com/" target="_blank">Cartoons</a>
+        </li>
+      </ul>  
+
     </div>
+
     <main>
+      <section>
+      <h1>I'm shopping for...</h1>
+        <form id="topicSearch">
+          <fieldset>
+            <legend>Gift recipient</legend>
+            <p><input type="radio" name="interest" id="topicSearchValue_Grandma" value="Grandma" checked />
+              <label for="topicSearchValue_Grandma">Grandma</label></p>
+            <p><input type="radio" name="interest" id="topicSearchValue_Mom" value="Mom" checked />
+              <label for="topicSearchValue_Mom">Mom</label></p>
+            <p><input type="radio" name="interest" id="topicSearchValue_Dad" value="Dad" checked />
+              <label for="topicSearchValue_Dad">Dad</label></p>
+            <p><input type="radio" name="interest" id="topicSearchValue_Sister" value="Sister" checked />
+              <label for="topicSearchValue_Sister">Sister</label></p>
+            <p><input type="radio" name="interest" id="topicSearchValue_Brother"value="Brother" checked />
+              <label for="topicSearchValue_Brother">Brother</label></p>
+            <p><input type="radio" name="interest" id="topicSearchValue_Child"value="Child" checked />
+              <label for="topicSearchValue_Child">Child</label></p>
+            <p><input type="radio" name="interest" id="topicSearchValue_Husband"value="Husband" checked />
+              <label for="topicSearchValue_Husband">Husband</label></p>
+            <p><input type="radio" name="interest" id="topicSearchValue_Wife"value="Wife" checked />
+              <label for="topicSearchValue_Wife">Wife</label></p>
+            <p><input type="radio" name="interest" id="topicSearchValue_Baby"value="Baby" checked />
+              <label for="topicSearchValue_Baby">Baby</label></p>
+            <p><input type="radio" name="interest" id="topicSearchValue_Friend"value="Friend" checked />
+              <label for="topicSearchValue_Friend">Friend</label></p>  
+          </fieldset>        
+        </form>
 
-
+      </section>
       <div id="formsTutorial">
         
-      <h1 id="myTag">GraceDesigned</h1>
+        <h1 id="myTag">GraceDesigned</h1>
 
-        <form >
-          <ul>
-            <li>
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="user_name" value="Your name here" />
-            </li>
-            <li>
-              <label for="mail">Email:</label>
-              <input type="email" id="mail" name="user_email" />
-            </li>
-            <li>
-              <label for="msg">Message:</label>
-              <textarea id="msg" name="user_message"></textarea>
-            </li>
-            <li class="button">
-              <button type="button">Send your message</button>
-            </li>
-          </ul>
-        </form>
-        
-
-
-
+          <form action="/my-handling-form-page" method="post">
+            <ul>
+              <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" value="Your name here" />
+              </li>
+              <li>
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="user_email" />
+              </li>
+              <li>
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="user_message"></textarea>
+              </li>
+              <li class="button">
+                <button type="button">Send your message</button>
+              </li>
+            </ul>
+            
+            <label for="file">File progress:</label>
+            <progress id="file" max="100" value="70">70%</progress>
+          </form>     
       </div>
     </main>
     <footer>
