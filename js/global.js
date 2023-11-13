@@ -2,7 +2,7 @@
 
   let body = document.querySelector("body");
 
-  document.querySelector('h1#myTag').insertAdjacentHTML("beforeend", `<img class="thumb" src="https://design.gracetoread.com/img/clipart/nature/monarch_01.png" />`);
+  document.querySelector('h2#myTag').insertAdjacentHTML("beforeend", `<img class="thumb" src="https://design.gracetoread.com/img/clipart/nature/monarch_01.png" />`);
 
   //lightbox
   document.querySelector(".thumb").addEventListener('click', function(e) {

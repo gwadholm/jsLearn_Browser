@@ -7,13 +7,14 @@ body {
 h1, h2, h3, h4, h5, li, a, p {
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
 }
+
 header {
   padding: 20px 0 20px 10px;
   margin: auto;
   max-width: 1400px;  
 }
 main {
-  padding: 0;
+  padding: 0 10px 0 20px;
   margin: 80px auto 0 auto;
   max-width: 1000px;
 }
@@ -177,7 +178,7 @@ nav a {
 #banner:before{
   content: "";
   border-top: 1px solid #bbb;
-  background-color: rgb(255,222,191);
+  background-color: #D0E3C4;
   position: absolute;
   width: 100%;
   top: 0;
@@ -199,17 +200,18 @@ nav a {
 ul#categoryBubbles {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 2rem;
+  gap: 1rem;
   list-style-type: none;
   width: 100vw;
   margin: auto;
   max-width: 1100px;
-  padding: 0; 
+  padding: 0;
 }
 ul#categoryBubbles li{
   max-width:100%;
   display: inline-block;
   margin: 5px auto 0 auto;
+
 }
 #categoryBubbles a:before {
   content: '';
@@ -221,7 +223,7 @@ ul#categoryBubbles li{
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: #eeece9;
+  background-color: snow;
   border: 1px solid #d4b9a0;
   margin-bottom: 10px;
   /* transition: width ease 0.9s, height ease 0.9s; */
@@ -233,10 +235,10 @@ ul#categoryBubbles li{
   background-image: url(../img/cupcake_Pink_02.png);
 }
 #bubble3 a:before {
-  background-image: url(../img/monarch_01.png);
+  background-image: url(../img/monarch_02.png);
 }
 #bubble4 a:before {
-  background-image: url(../img/snowflake_01.png);
+  background-image: url(../img/christmasTree_08.png);
 }
 #bubble5 a:before {
   background-image: url(../img/christmasTree_swirl.svg);
@@ -301,7 +303,6 @@ form#topicSearch  a:hover {
   transition-duration: 100ms ;
   transition-delay: 5ms ;
 }
-
 form#topicSearch  label:hover {
   background-color: rgb(210, 210, 210);
   box-shadow: 0px 1px 3px 0px RGB(212, 212, 212) ;
@@ -314,6 +315,9 @@ label.topicButton {
   min-width: 48px;
   min-height: 48px;
   background-color: aquamarine;
+}
+#formsTutorial label {
+  margin-top: 20px;
 }
 input[type=radio] {
   opacity:0;
@@ -355,7 +359,8 @@ div.lightboxDiv {
 
 
 /* Playground */
-h1#myTag {
+#formsTutorial h2 {
+  font-size: 32px;
   text-align: center;
   margin-top: 10px;
 }
@@ -409,11 +414,22 @@ form#formsTutorial li + li {
 #formsTutorial .button {
   padding-left: 0px;
 }
+/* #banner {
+  background-image: url(../img/tulipBorder.svg);
+  background-repeat: repeat-x;
+  background-size: auto 30px;
+  background-position-y: 10px;
+} */
+
+
 /**mobile versions */
   
 @media only screen and (max-width: 1400px) {
 
 }
+
+
+
 @media only screen and (max-width: 1118px) {
 
   ul#categoryBubbles {    
@@ -421,6 +437,9 @@ form#formsTutorial li + li {
   }
 
 }
+
+
+
 @media only screen and (max-width: 960px) {
   #categoryBubbles a:before {
     width: 100px;
@@ -514,7 +533,7 @@ form#formsTutorial li + li {
   #formsTutorial {
     width: 250px;
   }
-  h1#splash {
+  h1 {
     width: 350px;
     margin: auto;
     margin-top: 0px;
@@ -532,7 +551,7 @@ form#formsTutorial li + li {
   #formsTutorial label {
     width: 60px;
   }
-  h1#myTag {
+  #formsTutorial h2 {
     font-size: 1.6em;
   }
   #myTag img {
@@ -547,7 +566,7 @@ form#formsTutorial li + li {
   ul#categoryBubbles {
     max-width: 300px;
   }
-  h1#splash {
+  h1 {
     width: 220px;
     margin: auto;
     margin-top: 0px;    

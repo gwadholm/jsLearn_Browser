@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -7,12 +7,13 @@
     <meta name="description" content="A collection of clip art, motion graphic videos, pattern designs, and other digital assets created by me during my courses at Valencia College." />
 
     <title>My Clip Art Site</title>
-    <link rel="stylesheet" href="css/global.css"></head>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <header>
       <div id="headNav">
-        <span><img id="logoSVG" src="img/logo.svg" /></span>
+        <span><img id="logoSVG" src="img/logo-02.svg" /></span>
       </div>
 
       <div id="search">
@@ -42,44 +43,49 @@
       </div> 
   
       <nav>
-          <a href="#" alt="Clip art library" target="_blank">Clip Art Library</a>
-          <a href="https://www.grace.wadholm.com/resume.html" alt="Pattern Designs" target="_blank">Pattern Designs</a>
-          <a href="https://design.gracetoread.com/videos.html" alt="Motion Graphics" target="_blank">Motion Graphics</a>
+          <a href="#" alt="Clip art library" target="_blank" title="Static link to the top of this page">Clip Art Library</a>
+          <a href="https://www.grace.wadholm.com/resume.html" alt="Pattern Designs" target="_blank" title="Link to my motion graphics videos on my tutorial site, which includes four of my pattern designs">Pattern Designs</a>
+          <a href="https://design.gracetoread.com/videos.html" alt="Motion Graphics" target="_blank" title="Link to my motion graphics and other animatio and live action videos on my live design site">Motion Graphics</a>
+          <a href="#myTag" alt="Newsletter" target="_blank" title="Link to the form to sign up to my newsletter">Newsletter</a>
       </nav>  
-
     
     </header>  
 
     
    <div id="banner">
+
       <h1 id="splash">Explore my clip art library.</h1>
 
       <ul id="categoryBubbles" class="bubbles">
         <li class="categoryBubble" id="bubble1">
-          <a href="https://design.gracetoread.com/"  target="_blank">Leaves</a>
+          <a href="https://design.gracetoread.com/"  target="_blank" title="Link to Grace Wadholm's live design site">Leaves</a>
         </li>
         <li class="categoryBubble" id="bubble2">
-          <a href="https://design.gracetoread.com/"  target="_blank">Food</a>
+          <a href="https://design.gracetoread.com/"  target="_blank" title="Link to Grace Wadholm's live design site">Food</a>
         </li>
         <li class="categoryBubble" id="bubble3">
-          <a href="https://design.gracetoread.com/"  target="_blank">Nature</a>
+          <a href="https://design.gracetoread.com/"  target="_blank" title="Link to Grace Wadholm's live design site">Animals</a>
         </li>
         <li class="categoryBubble" id="bubble4">
-          <a href="https://design.gracetoread.com/"  target="_blank">Snowflake</a>
+          <a href="https://design.gracetoread.com/"  target="_blank" title="Link to Grace Wadholm's live design site">Christmas</a>
         </li>
         <li class="categoryBubble" id="bubble5">
-          <a href="https://design.gracetoread.com/" target="_blank">Holidays</a>
+          <a href="https://design.gracetoread.com/" target="_blank" title="Link to Grace Wadholm's live design site">Nature</a>
         </li>
         <li class="categoryBubble" id="bubble6">            
-          <a href="https://design.gracetoread.com/" target="_blank">Cartoons</a>
+          <a href="https://design.gracetoread.com/" target="_blank" title="Link to Grace Wadholm's live design site">Cartoons</a>
         </li>
       </ul>  
 
     </div>
 
     <main>
+
+     
       <section>
-      <h1>I'm shopping for...</h1>
+
+        <h2>I'm shopping for...</h2>
+        
         <form id="topicSearch">
           <fieldset>
             <legend>Gift recipient</legend>
@@ -104,13 +110,14 @@
             <p><input type="radio" name="interest" id="topicSearchValue_Friend" value="Friend" checked />
               <label for="topicSearchValue_Friend">Friend</label></p>  
           </fieldset>
-          <a href="">Gifts for grandma</a>        
+          <a href="#"  title="Static link to the top of this page">Gifts for grandma</a>        
         </form>
 
       </section>
+
       <div id="formsTutorial">
         
-        <h1 id="myTag">GraceDesigned</h1>
+        <h2 id="myTag">GraceDesigned</h2>
 
           <form action="/my-handling-form-page" method="post">
             <ul>
@@ -131,12 +138,16 @@
               </li>
             </ul>
             
-            <label for="file">File progress:</label>
-            <progress id="file" max="100" value="70">70%</progress>
+            <label id="progressBar" for="file">File progress:</label>
+            <progress id="file" max="100" value="10">10%</progress>
+            
           </form>     
       </div>
+
     </main>
+
     <footer>
+      <p>footer</p>
 
     </footer>
     
