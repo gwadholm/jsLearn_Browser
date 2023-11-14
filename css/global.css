@@ -7,7 +7,11 @@ body {
 h1, h2, h3, h4, h5, li, a, p {
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
 }
+clear {
 
+clear:both; 
+display:block; overflow:hidden; visibility:hidden; height:0px;
+}
 header {
   padding: 20px 0 20px 10px;
   margin: auto;
@@ -18,7 +22,9 @@ main {
   margin: 80px auto 0 auto;
   max-width: 1000px;
 }
-
+footer {
+  text-align: center;
+}
 
 /* Nav Bar  */
 #headNav {
@@ -254,6 +260,44 @@ ul#categoryBubbles li{
 }
 
 /* Button Field */
+section {
+  display: flex;
+  padding: 0;
+  margin: 0;
+
+}
+form#topicSearch {
+  display: inline-block;
+  width:40%;
+
+
+ 
+}
+#topicImageBox {
+  display: inline-block;
+  width: 58%;
+
+  margin: 0;
+  padding: 0;
+
+}
+.image-masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2);
+  row-gap: 14px;
+  column-gap: 14px;
+  margin: 0;
+
+}
+.masonry-brick {
+  background-color: rgb(193, 207, 196);
+  margin: auto;
+
+
+}
+
+
 
 form#topicSearch legend{
   display: none;
@@ -310,6 +354,7 @@ form#topicSearch  label:hover {
   cursor: pointer;
   transition-duration: 100ms ;
 } 
+
 label.topicButton {
   display: inline-block;
   min-width: 48px;
