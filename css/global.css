@@ -1,3 +1,5 @@
+
+
 html{
   background-color: #b0bea7;
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
@@ -13,10 +15,14 @@ body {
 /* h1, h2, h3, h4, h5, li, a, p {
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
 } */
-clear {
+/* clear {
 
 clear:both; 
 display:block; overflow:hidden; visibility:hidden; height:0px;
+} */
+
+* {
+  box-sizing: border-box;
 }
 header {
   padding: 20px 0 20px 10px;
@@ -70,23 +76,22 @@ form#globalSearchForm, #searchBar {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-right: 0;
-  height: 47px;
-  padding: 0 0 0 10px;
+  height: 50px;
+  padding: 2px 10px;
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
   font-size: 16px;
   outline: none;
 }
 button.globalSearch_icon div {
-  width: 25px;
-  height: 25px;
+  width: 40px;
   padding: 6px;
   margin-right: 4px;
-  margin-top: 1px;
+  margin-top: 0px;
   background-color: #ff925c;
   border-radius: 50%;
 }
 button.globalSearch_icon section img {
-  width: 24px;
+  width: 22px;
 }
 button.globalSearch_icon {
   border: 2px solid #222;  
@@ -324,7 +329,7 @@ form#topicSearch a {
   display: inline-block;
   margin: 4px;
   padding: 12px 12px;
-  min-width: 60px;
+  min-width: 100px;
   position: relative;
   text-align: center;
   vertical-align: middle;
@@ -522,6 +527,7 @@ form#formsTutorial li + li {
     width: calc(100% - 40px);
     margin-top: 40px;
   }
+
   #account {
     position: absolute;
     float: right;
