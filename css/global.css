@@ -1,12 +1,18 @@
-body {
-  background-color: white;
-  padding: 0;
-  margin: 0;
-  /* overflow-x: hidden; */
-}
-h1, h2, h3, h4, h5, li, a, p {
+html{
+  background-color: #b0bea7;
   font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
 }
+body {
+  background-color: white;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0;
+  margin: 0 auto;
+  /* overflow-x: hidden; */
+}
+/* h1, h2, h3, h4, h5, li, a, p {
+  font-family: "Guardian-EgypTT","Charter","Charter Bitstream","Cambria","Noto Serif Light","Droid Serif","Georgia","serif";
+} */
 clear {
 
 clear:both; 
@@ -189,7 +195,6 @@ nav a {
   width: 100%;
   top: 0;
   height: 80%;
-  z-index: -999;
 }
 #banner h1{
   text-align: center;
