@@ -198,9 +198,9 @@ nav a {
   border-top: 1px solid #bbb;
   background-color: #D0E3C4;
   position: absolute;
-  width: 100%;
+  width: 100% ;
   top: 0;
-  height: 80%;
+  height: 200px; 
   z-index: -999;
 }
 #banner h1{
@@ -215,7 +215,7 @@ nav a {
 
 
 /*BubbleGrid*/
-ul#categoryBubbles {
+ul#rowOfBubbles {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 1rem;
@@ -225,13 +225,16 @@ ul#categoryBubbles {
   max-width: 1100px;
   padding: 0;
 }
-ul#categoryBubbles li{
+ul#rowOfBubbles li{
   max-width:100%;
   display: inline-block;
   margin: 5px auto 0 auto;
 
 }
-#categoryBubbles a:before {
+li.bubble {
+  width: 150px;
+}
+#rowOfBubbles a:before {
   content: '';
   position: relative;
   display: block;
@@ -264,11 +267,20 @@ ul#categoryBubbles li{
 #bubble6 a:before {
   background-image: url(../img/snowman_01.png);
 }
-.categoryBubble a {
+.bubble a {
   display: inline-block;
   text-align: center;
   text-decoration: none;
   color: #222;
+  border-bottom: white 2px solid;
+  padding-bottom: 6px;
+  margin: 0 auto 0 auto;
+}
+.bubble a:hover {
+  border-bottom: #3a3a3a 2px solid;
+}
+#rowOfBubbles a:hover::before {
+  /* transition: opacity 200ms ease-out; */
 }
 
 /* Button Field */
@@ -507,20 +519,22 @@ form#formsTutorial li + li {
 
 @media only screen and (max-width: 1118px) {
 
-  ul#categoryBubbles {    
+  ul#rowOfBubbles {    
     max-width: 1100px;
   }
-
+  .bubble a {
+    border-bottom: rgba(0,0,0,0) 2px solid;
+  }
 }
 
 
 
 @media only screen and (max-width: 960px) {
-  #categoryBubbles a:before {
+  #rowOfBubbles a:before {
     width: 100px;
     height: 100px;
   }
-  ul#categoryBubbles {
+  ul#rowOfBubbles {
     /* max-width: 1200px; */
   }
 }
@@ -528,11 +542,11 @@ form#formsTutorial li + li {
 
 
 @media only screen and (max-width: 800px) {
-  #categoryBubbles a:before {
+  #rowOfBubbles a:before {
     width: 114px;
     height: 114px;
   }
-  ul#categoryBubbles {
+  ul#rowOfBubbles {
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 700px;
   }
@@ -579,11 +593,14 @@ form#formsTutorial li + li {
 
 
 @media only screen and (max-width: 490px) {
-  #categoryBubbles a:before {
+  #rowOfBubbles a:before {
     width: 95px;
     height: 95px;
   }
-
+  #banner:before{
+    height: 360px;
+    padding-top: 0px;
+  }  
 }
 
 
@@ -594,11 +611,11 @@ form#formsTutorial li + li {
 
 
 @media only screen and (max-width: 390px) {
-  #categoryBubbles a:before {
+  #rowOfBubbles a:before {
     width: 110px;
     height: 110px;
   }
-  ul#categoryBubbles {
+  ul#rowOfBubbles {
     grid-template-columns: 1fr 1fr;
     max-width: 380px;
   }  
@@ -639,7 +656,7 @@ form#formsTutorial li + li {
 
 
 @media only screen and (max-width: 350px) {
-  ul#categoryBubbles {
+  ul#rowOfBubbles {
     max-width: 300px;
   }
   h1 {
@@ -658,7 +675,7 @@ form#formsTutorial li + li {
 
 
 @media only screen and (max-width: 280px) {
-  #categoryBubbles a:before {
+  #rowOfBubbles a:before {
     width: 80px;
     height: 80px;
   }
